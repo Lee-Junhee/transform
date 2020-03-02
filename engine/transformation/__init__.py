@@ -1,5 +1,5 @@
 from matrix import Matrix
-from math import cos, sin
+from math import cos, sin, pi
 
 class Transformation():
     transform = Matrix()
@@ -31,6 +31,7 @@ class Transformation():
     
     def rotate(self, axis="z", angle=0):
         r = self.r
+        angle = angle * pi / 180
         rotation = Matrix()
         rotation.ident()
         rotation.content[r[axis][0]][r[axis][0]] = cos(angle)

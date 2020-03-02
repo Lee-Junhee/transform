@@ -40,13 +40,13 @@ def parse(src, p, color):
         else:
             args = cmd.split()
             if cmdbuf == 'line':
-                m.addEdge((int(args[0]), int(args[1]), int(args[2])),(int(args[3]), int(args[4]), int(args[5])))
+                m.addEdge((float(args[0]), float(args[1]), float(args[2])),(float(args[3]), float(args[4]), float(args[5])))
             elif cmdbuf == 'scale':
-                t.scale(int(args[0]), int(args[1]), int(args[2]))
+                t.scale(float(args[0]), float(args[1]), float(args[2]))
             elif cmdbuf == 'move':
-                t.move(int(args[0]), int(args[1]), int(args[2]))
+                t.move(float(args[0]), float(args[1]), float(args[2]))
             elif cmdbuf == 'rotate':
-                t.rotate(args[0], int(args[1]))
+                t.rotate(args[0], float(args[1]))
             elif cmdbuf == 'save':
                 p.clear()
                 l = Line(p, color)
